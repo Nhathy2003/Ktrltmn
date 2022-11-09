@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> User3</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> User3</h1>
+    <a href="form-add"><button>Add</button></a>
+    <table border="1">
+      <tr>
+        <th>IdDistrict</th>
+        <th>IdVillage</th>
+        <th>Address</th>
+        <th>IsGetNotification</th>
+        <th>IsVerified</th>
+        <th>IsGetOpen</th>
+        <th>Acction</th>
+      </tr>
+       <% lops.forEach(item => { %>  
+        <tr>
+          <td><%= item._IdDistrict %> </td>
+          <td><%= item.IdVillage %> </td>
+          <td><%= item.Address %> </td>
+          <td><%= item.IsGetNotification %> </td>
+          <td><%= item.IsVerified %> </td>
+          <td><%= item.IsGetOpen %> </td>
+          <td><a href="/form-update/<%= item._id %>">Update</a>||<a href="/form-delete/<%= item._id%>">Delete</a></td>
+        </tr>
+        <% }) %>
+
+
+
+     </table>
+  </body>
+</html>
